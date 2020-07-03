@@ -12,7 +12,7 @@
   },
   "keywords": [],
   "author": "Felipe Côrtes <contatos.cortes@gmail.com>",
-  "license": "MIT",
+  "license": "Apache License 2.0",
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
