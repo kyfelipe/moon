@@ -3,8 +3,16 @@ import { remote } from 'electron'
 import os from 'os'
 import { FiX, FiMinus, FiMaximize2, FiSquare } from 'react-icons/fi'
 
-import { Container, WindowActions, MacActionButton, DefaultActionButton } from './styles'
 import { useConfig } from '../../hooks/useConfig'
+import {
+  Container,
+  WindowActions,
+  MacActionButton,
+  DefaultActionButton,
+  Close,
+  Minimize,
+  Square
+} from './styles'
 
 const Header: React.FC = () => {
   const handleCloseWindow = useCallback(() => {
@@ -59,14 +67,14 @@ const Header: React.FC = () => {
         </WindowActions>
       ) : (
         <WindowActions position="right">
-          <DefaultActionButton onClick={handleMinimize}>
-            <FiMinus />
+          <DefaultActionButton type="default" onClick={handleMinimize}>
+            <Minimize />
           </DefaultActionButton>
-          <DefaultActionButton onClick={handleMaximize}>
-            <FiSquare />
+          <DefaultActionButton type="default" onClick={handleMaximize}>
+            <Square />
           </DefaultActionButton>
-          <DefaultActionButton onClick={handleCloseWindow}>
-            <FiX />
+          <DefaultActionButton type="close" onClick={handleCloseWindow}>
+            <Close />
           </DefaultActionButton>
         </WindowActions>
       )}

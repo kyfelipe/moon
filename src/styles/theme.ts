@@ -1,22 +1,9 @@
-import { shade } from 'polished'
-
 export const defaultTheme = {
   colors: {
     white: '#E1E1E6',
-    grey: shade(0.3, '#E1E1E6'),
-    // opaque: '#41414D',
-    // purple: '#6633cc',
-    // purpleDark: '#5A4B81',
-    green: '#67e480',
-    // orange: '#E89E64',
-    // pink: '#FF79C6',
-    // cyan: '#78D1E1',
-    red: '#E96379',
-    yellow: '#e7de79'
+    grey: '#828386'
   },
   backgrounds: {
-    // lightest: '#252131',
-    // lighter: '#201B2D',
     dark: '#36393f',
     darker: '#2f3136',
     darkest: 'rgb(32,34,37)'

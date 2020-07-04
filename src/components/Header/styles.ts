@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components'
-import { defaultTheme } from '../../styles/theme'
+import { CloseOutline } from '@styled-icons/evaicons-outline'
+import { WindowMinimize } from '@styled-icons/fa-regular'
+import { Square as SquareIcon } from '@styled-icons/boxicons-regular'
 
 export const Container = styled.header`
   width: 100%;
@@ -29,7 +31,7 @@ export const WindowActions = styled.div<WindowActionsProps>`
   height: 100%;
   display: flex;
   align-items: center;
-  ${props => props.position === 'left' ? css`left: 16px;` : css`right: 16px;`};
+  ${props => props.position === 'left' ? css`left: 0;` : css`right: 0;`};
 `
 
 interface MacActionButtonProps {
@@ -37,9 +39,9 @@ interface MacActionButtonProps {
 }
 
 const colors = {
-  close: defaultTheme.colors.red,
-  minimize: defaultTheme.colors.yellow,
-  maximize: defaultTheme.colors.green
+  close: '#E96379',
+  minimize: '#e7de79',
+  maximize: '#67e480'
 }
 
 export const MacActionButton = styled.button<MacActionButtonProps>`
@@ -72,24 +74,45 @@ export const MacActionButton = styled.button<MacActionButtonProps>`
   }
 `
 
-export const DefaultActionButton = styled.button`
+interface DefaultActionButtonProps {
+  type: 'default' | 'close';
+}
+
+export const DefaultActionButton = styled.button<DefaultActionButtonProps>`
   background: transparent;
   -webkit-app-region: no-drag;
   border: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  padding: ${props => props.type == 'default' ? '0 12px' : '0 8px'};
   color: ${props => props.theme.colors.grey};
-  & + button {
-    margin-left: 12px;
+
+  &:hover {
+    background-color: ${props => props.type == 'default' ? 'rgba(130,131,134, 0.2)' : '#D71526'};
+    color: ${props => props.type == 'default' ? props.theme.colors.grey : props.theme.colors.white};
   }
-  &:hover svg {
-    color: ${props => props.theme.colors.white};
-  }
-  &:active {
-    opacity: 0.6;
-  }
+  
   &:focus {
     outline: 0;
   }
+`
+
+export const Close = styled(CloseOutline)`
+  width: 20px;
+  height: 20px;
+`
+
+export const Square = styled(SquareIcon)`
+  width: 16px;
+  height: 16px;
+  color: ${props => props.theme.colors.grey};
+`
+
+export const Minimize = styled(WindowMinimize)`
+  width: 14px;
+  height: 14px;
+  margin-top: -8px;
+  color: ${props => props.theme.colors.grey};
 `
