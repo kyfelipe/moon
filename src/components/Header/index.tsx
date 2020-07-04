@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo } from 'react'
 import { remote } from 'electron'
 import os from 'os'
-import { FiX, FiMinus, FiMaximize2, FiSquare } from 'react-icons/fi'
+import { FiX, FiMinus, FiMaximize2 } from 'react-icons/fi'
 
 import { useConfig } from '../../hooks/useConfig'
 import {
@@ -67,13 +67,13 @@ const Header: React.FC = () => {
         </WindowActions>
       ) : (
         <WindowActions position="right">
-          <DefaultActionButton type="default" onClick={handleMinimize}>
+          <DefaultActionButton typeAction="default" onClick={handleMinimize}>
             <Minimize />
           </DefaultActionButton>
-          <DefaultActionButton type="default" onClick={handleMaximize}>
+          <DefaultActionButton typeAction="default" onClick={handleMaximize}>
             <Square />
           </DefaultActionButton>
-          <DefaultActionButton type="close" onClick={handleCloseWindow}>
+          <DefaultActionButton typeAction="close" onClick={handleCloseWindow}>
             <Close />
           </DefaultActionButton>
         </WindowActions>

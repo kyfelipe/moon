@@ -75,7 +75,7 @@ export const MacActionButton = styled.button<MacActionButtonProps>`
 `
 
 interface DefaultActionButtonProps {
-  type: 'default' | 'close';
+  typeAction: 'default' | 'close';
 }
 
 export const DefaultActionButton = styled.button<DefaultActionButtonProps>`
@@ -86,12 +86,12 @@ export const DefaultActionButton = styled.button<DefaultActionButtonProps>`
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding: ${props => props.type == 'default' ? '0 12px' : '0 8px'};
+  padding: ${props => props.typeAction == 'default' ? '0 12px' : '0 8px'};
   color: ${props => props.theme.colors.grey};
 
   &:hover {
-    background-color: ${props => props.type == 'default' ? 'rgba(130,131,134, 0.2)' : '#D71526'};
-    color: ${props => props.type == 'default' ? props.theme.colors.grey : props.theme.colors.white};
+    background-color: ${props => props.typeAction == 'default' ? 'rgba(130,131,134, 0.2)' : '#D71526'};
+    color: ${props => props.typeAction == 'default' ? props.theme.colors.grey : props.theme.colors.white};
   }
   
   &:focus {
