@@ -8,11 +8,15 @@ let mainWindow: Electron.BrowserWindow | null
 function createWindow () {
   mainWindow = new BrowserWindow({
     width: 1100,
+    minWidth: 1000,
     height: 700,
-    backgroundColor: '#191622',
+    minHeight: 600,
+    frame: false,
+    transparent: true,
+    // backgroundColor: '#191622',
     webPreferences: {
-      nodeIntegration: true
-    }
+      nodeIntegration: true,
+    },
   })
 
   if (process.env.NODE_ENV === 'development') {
