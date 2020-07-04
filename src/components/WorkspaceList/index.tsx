@@ -1,8 +1,16 @@
 import React from 'react'
 
+import { Container } from './styles'
+import WorkspaceButton from '../WorkspaceButton';
+
 const WorkspaceList: React.FC = () => {
   return (
-    <h1>oi</h1>
+    <Container>
+      <WorkspaceButton selected />
+      <WorkspaceButton />
+      <WorkspaceButton />
+      <WorkspaceButton />
+    </Container>
   )
 }
 

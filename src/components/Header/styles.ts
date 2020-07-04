@@ -5,7 +5,7 @@ import { Square as SquareIcon } from '@styled-icons/boxicons-regular'
 
 export const Container = styled.header`
   width: 100%;
-  height: 30px;
+  min-height: 30px;
   position: relative;
   -webkit-user-select: none;
   -webkit-app-region: drag;

@@ -1,7 +1,9 @@
 export const defaultTheme = {
   colors: {
     white: '#E1E1E6',
-    grey: '#828386'
+    grey: '#828386',
+    lightPurple: '#6A1B9A',
+    darkPurple: '#4527A0',
   },
   backgrounds: {
     dark: '#36393f',
