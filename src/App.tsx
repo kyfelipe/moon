@@ -5,6 +5,7 @@ import styled, { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from './styles/GlobalStyle'
 import { defaultTheme } from './styles/theme'
 import Header from './components/Header'
+import Layout from './components/Layout'
 
 const mainElement = document.createElement('div')
 mainElement.setAttribute('id', 'root')
@@ -32,12 +33,7 @@ const App = () => {
         <Container>
           <Header />
           <Content>
-            <h1>Hello Moon!</h1>
-            {/* <Sidebar />
-            <Connection>
-              <ConnectionDetails />
-              <CodeView />
-            </Connection> */}
+            <Layout />
           </Content>
         </Container>
       {/*</AppProvider>*/}
