@@ -26,6 +26,8 @@
   ],
   "rules": {
     "react/prop-types": "off",
+    "no-trailing-spaces": "off",
+    "space-before-function-paren": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -37,7 +39,7 @@
   },
   "settings": {
     "import/resolver": {
-      "typescript": {} 
+      "typescript": {}
     }
   }
 }

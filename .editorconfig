@@ -1,0 +1,16 @@
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+max_line_length = 120
+trim_trailing_whitespace = false
+ij_javascript_use_semicolon_after_statement = false
+ij_typescript_use_semicolon_after_statement = false
+
+[{*.ats,*.ts}]
+indent_size = 2
+tab_width = 2
+
+[{*.js,*.cjs}]
+indent_size = 2
