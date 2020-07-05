@@ -14,7 +14,7 @@ document.body.appendChild(mainElement)
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background: ${props => props.theme.backgrounds.darker};
+  background: ${props => props.theme.backgrounds.dark};
   overflow: hidden;
   display: flex;
   flex-direction: column;
