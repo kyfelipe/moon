@@ -10,4 +10,4 @@ interface WorkspaceListContext {
   selectWorkspace(name: string): void;
 }
 
-export default createContext<WorkspaceListContext>({} as WorkspaceListContext);
+export default createContext<WorkspaceListContext>({} as WorkspaceListContext)

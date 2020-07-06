@@ -11,4 +11,4 @@ const WorkspaceData: React.FC = () => {
   )
 }
 
-export default WorkspaceData;
+export default WorkspaceData

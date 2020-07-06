@@ -3,17 +3,6 @@ import React, { useCallback, useState } from 'react'
 import WorkspaceListContext, { Workspace } from '../../context/WorkspaceListContext'
 import { Container } from './styles'
 
-// const WorkspaceList: React.FC = () => {
-//   return (
-//     <Container>
-//       <WorkspaceButton selected />
-//       <WorkspaceButton />
-//       <WorkspaceButton />
-//       <WorkspaceButton />
-//     </Container>
-//   )
-// }
-
 const WorkspaceList: React.FC = ({ children }) => {
   const [workspaces, setWorkspaces] = useState<Workspace[]>([])
   

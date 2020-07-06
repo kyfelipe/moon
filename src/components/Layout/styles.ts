@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 // WL - Workspace List
 // WD - Workspace Data
@@ -12,4 +12,4 @@ export const Grid = styled.div`
   
   grid-template-areas:
     'WL WD';
-`;
+`

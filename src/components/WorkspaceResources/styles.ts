@@ -1,11 +1,10 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
   grid-area: WR;
   
   display: flex;
   flex-direction: column;
-  align-items: left;
   
   background-color: ${props => props.theme.backgrounds.darker};
   padding: 10px 20px;

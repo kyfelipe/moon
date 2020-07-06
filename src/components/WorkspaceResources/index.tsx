@@ -37,4 +37,4 @@ const WorkspaceResources: React.FC = () => {
   )
 }
 
-export default WorkspaceResources;
+export default WorkspaceResources

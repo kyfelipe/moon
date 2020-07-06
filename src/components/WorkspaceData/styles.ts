@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 // WR - Workspace resources
 // WI - Workspace info
@@ -15,4 +15,4 @@ export const Container = styled.div`
   
   grid-template-areas:
     'WR WI';
-`;
+`

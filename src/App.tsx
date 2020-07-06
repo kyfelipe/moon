@@ -29,14 +29,12 @@ const Content = styled.div`
 const App = () => {
   return (
     <ThemeProvider theme={defaultTheme}>
-      {/*<AppProvider>*/}
-        <Container>
-          <Header />
-          <Content>
-            <Layout />
-          </Content>
-        </Container>
-      {/*</AppProvider>*/}
+      <Container>
+        <Header />
+        <Content>
+          <Layout />
+        </Content>
+      </Container>
       <GlobalStyle />
     </ThemeProvider>
   )

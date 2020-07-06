@@ -5,24 +5,15 @@ import WorkspaceList from '../WorkspaceList'
 import WorkspaceData from '../WorkspaceData'
 import WorkspaceButton from '../WorkspaceButton'
 
-// const Layout: React.FC = () => {
-//   return (
-//     <Grid>
-//       <WorkspaceList />
-//       <WorkspaceData />
-//     </Grid>
-//   )
-// }
-
 const Layout: React.FC = () => {
   return (
     <Grid>
       <WorkspaceList>
-        <WorkspaceButton name="W1" selected />
-        <WorkspaceButton name="W2" />
-        <WorkspaceButton name="W3" />
-        <WorkspaceButton name="W4" />
-        <WorkspaceButton name="W5" />
+        <WorkspaceButton name="Initial" selected />
+        <WorkspaceButton name="Bloom" />
+        <WorkspaceButton name="State" />
+        <WorkspaceButton name="Underground" />
+        <WorkspaceButton name="Workspace" />
       </WorkspaceList>
       <WorkspaceData />
     </Grid>

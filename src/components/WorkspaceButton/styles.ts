@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import { WorkspaceButtonProps } from './index';
+import { WorkspaceButtonProps } from './index'
 
 export const Button = styled.button<WorkspaceButtonProps>`
   display: flex;
@@ -15,6 +15,9 @@ export const Button = styled.button<WorkspaceButtonProps>`
   border-radius: 50%;
   
   margin-bottom: 8px;
+  
+  color: ${props => props.theme.colors.white};
+  font-weight: bold;
   
   background-color: ${props => props.theme.colors.lightPurple};
   
@@ -31,7 +34,7 @@ export const Button = styled.button<WorkspaceButtonProps>`
     background-color: white;
     border-radius: 5px;
     content: '';
-    display: 'inline';
+    display: inline;
   }
   
   &.active,
@@ -39,4 +42,4 @@ export const Button = styled.button<WorkspaceButtonProps>`
     border-radius: 16px;
     background-color: ${props => props.theme.colors.darkPurple};
   }
-`;
+`
