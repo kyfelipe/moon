@@ -4,6 +4,7 @@ export const defaultTheme = {
     grey: '#828386',
     lightPurple: '#6A1B9A',
     darkPurple: '#4527A0',
+    green: '#43b581'
   },
   backgrounds: {
     dark: '#36393f',

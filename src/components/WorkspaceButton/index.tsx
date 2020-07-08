@@ -1,15 +1,16 @@
 import React, { useContext, useRef, useEffect } from 'react'
 
 import WorkspaceListContext from '../../context/WorkspaceListContext'
-import { Button } from './styles'
+import { Button, AddIcon } from './styles'
 
 export interface WorkspaceButtonProps {
   name: string;
   selected?: boolean;
   isHome?: boolean;
+  isAdd?: boolean;
 }
 
-const WorkspaceButton: React.FC<WorkspaceButtonProps> = ({ name, selected, isHome }) => {
+const WorkspaceButton: React.FC<WorkspaceButtonProps> = ({ name, selected, isHome, isAdd }) => {
   const workspaceRef = useRef(null)
   const { registerWorkspace, selectWorkspace } = useContext(WorkspaceListContext)
 
@@ -24,9 +25,13 @@ const WorkspaceButton: React.FC<WorkspaceButtonProps> = ({ name, selected, isHom
       name={name}
       ref={workspaceRef}
       isHome={isHome}
-      className={selected ? 'active' : ''}
+      isAdd={isAdd}
+      className={isHome ? 'active' : ''}
       onClick={() => selectWorkspace(name)}
-    >{name[0]}</Button>
+    >
+      {(!isHome && !isAdd) && name[0]}
+      {isAdd && <AddIcon color="white"/>}
+    </Button>
   )
 }
 

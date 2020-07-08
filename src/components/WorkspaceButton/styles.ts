@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { Add } from '@styled-icons/material-rounded/Add'
 
 import { WorkspaceButtonProps } from './index'
 
@@ -16,10 +17,10 @@ export const Button = styled.button<WorkspaceButtonProps>`
   
   margin-bottom: 8px;
   
-  color: ${props => props.theme.colors.white};
+  color: ${props => props.isAdd ? props.theme.colors.green : props.theme.colors.white};
   font-weight: bold;
   
-  background-color: ${props => props.theme.colors.lightPurple};
+  background-color: ${props => props.isAdd ? props.theme.backgrounds.dark : props.theme.colors.lightPurple};
   
   position: relative;
   cursor: pointer;
@@ -40,6 +41,14 @@ export const Button = styled.button<WorkspaceButtonProps>`
   &.active,
   &:hover {
     border-radius: 16px;
-    background-color: ${props => props.theme.colors.darkPurple};
+    background-color: ${props => props.isAdd ? props.theme.colors.green : props.theme.colors.darkPurple};
+    ${props => props.isAdd ? css`color: ${props.theme.colors.white};` : ''};
   }
+`
+
+export const AddIcon = styled(Add)`
+  width: 25px;
+  height: 25px;
+  margin-right: -1px;
+  margin-top: -1px;
 `

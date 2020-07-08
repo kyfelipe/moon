@@ -9,11 +9,13 @@ const Layout: React.FC = () => {
   return (
     <Grid>
       <WorkspaceList>
-        <WorkspaceButton name="Initial" selected />
+        <WorkspaceButton name="Home" isHome />
+        <WorkspaceButton name="Initial" />
         <WorkspaceButton name="Bloom" />
         <WorkspaceButton name="State" />
         <WorkspaceButton name="Underground" />
         <WorkspaceButton name="Workspace" />
+        <WorkspaceButton name="add" isAdd />
       </WorkspaceList>
       <WorkspaceData />
     </Grid>
